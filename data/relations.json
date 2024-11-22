@@ -1,0 +1,26 @@
+[
+    { "personId": 1,
+     "relationId": 2, 
+     "relationType": "Friend" 
+    },
+    { 
+    "personId": 2, 
+    "relationId": 5, 
+    "relationType": "Friend" 
+},
+{ 
+  "personId": 3, 
+  "relationId": 4, 
+  "relationType": "Friend" 
+},
+{ 
+  "personId": 4, 
+  "relationId": 5, 
+  "relationType": "Friend" 
+},
+{ 
+  "personId": 5, 
+  "relationId": 4, 
+  "relationType": "Friend" 
+}
+  ]
