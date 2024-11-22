@@ -4,15 +4,6 @@ import { getAllIds, getData } from '../lib/data';
 export async function getStaticProps( { params } ) {
   
   const data = await getData(params.id);
-  
-  // const relations = await getRelationsForPerson(params.id);
-  
-  // const relatedPeople = []
-  // for (const relation of relations) {
-  //   const relatedPerson = await getData(relation.relationId.toString());
-    
-  //   relatedPeople.push(relatedPerson)
-  // }
 
   console.log({ data })
   return {
@@ -40,10 +31,14 @@ export default function Entry({data}){
     return(
         <Layout>
           <h1>List of Posts names</h1>
-          <ul class="list-group">
-            <li class="list-group-item"> {postTitle}  </li>
-            <li class="list-group-item">  {secondPost} </li>
-           </ul>
+          <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{itemData.post_title}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">{itemData.user_login}</h6>
+    <p class="card-text">{itemData.post_content}</p>
+    
+  </div>
+</div>
           
         </Layout>
     );
