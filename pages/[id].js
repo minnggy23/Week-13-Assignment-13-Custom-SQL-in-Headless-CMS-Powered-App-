@@ -14,7 +14,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   const paths = await getAllIds();
-  console.log({ paths: JSON.stringify(paths) });
+ // console.log({ paths: JSON.stringify(paths) });
   return {
     paths,
     fallback: false,
@@ -34,8 +34,8 @@ export default function Entry({ itemData }) {
           <h6 class="card-subtitle mb-2 text-body-secondary">
             {itemData.user_login}
           </h6>
-          <p class="card-text">{itemData.post_content}</p>
-        </div>
+          <div className="card-text" dangerouslySetInnerHTML={{__html: itemData.post_content}} />
+          </div>
       </article>
     </Layout>
   );

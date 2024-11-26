@@ -20,7 +20,6 @@ export default function Home({allData}){
         {allData.map((data) => (
              <ul class="list-group">
              <li class="list-group-item"><h4><a href={"/"+data.id}>{data.name}</a></h4></li>
-
            </ul>
         ))}
         </Layout>
