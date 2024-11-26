@@ -18,12 +18,12 @@ export default function Home({allData}){
     return(
         <Layout home>
         {allData.map((data) => (
-            <div>
-              
-            </div>
+             <ul class="list-group">
+             <li class="list-group-item"><h4><a href={"/"+data.id}>{data.name}</a></h4></li>
+
+           </ul>
         ))}
         </Layout>
     );
 }
 
-<h4><a href={"/"+data.id}>{data.name}</a></h4>
