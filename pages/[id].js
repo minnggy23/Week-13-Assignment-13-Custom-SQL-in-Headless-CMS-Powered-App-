@@ -2,12 +2,12 @@ import Layout from "../components/layout";
 import { getAllIds, getData } from "../lib/data";
 
 export async function getStaticProps({ params }) {
-  const data = await getData(params.id);
+  const itemData = await getData(params.id);
 
-  console.log({ data });
+  //console.log({ itemData });
   return {
     props: {
-      data,
+      itemData,
     },
   };
 }
@@ -20,9 +20,9 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
-export default function Entry({ data }) {
+export default function Entry({ itemData }) {
   // console.log({relatedPeople})
-  console.log({ data });
+  console.log({ itemData });
   //  const postTitle = data.post_title
   //  const secondPost = data.post_title
   //  console.log('runing ID route');
@@ -41,7 +41,3 @@ export default function Entry({ data }) {
   );
 }
 
-{
-  /* */
-}
-// </div>

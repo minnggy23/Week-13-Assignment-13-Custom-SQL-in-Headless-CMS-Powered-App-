@@ -17,7 +17,13 @@ export async function getStaticProps(){
 export default function Home({allData}){
     return(
         <Layout home>
-        {JSON.stringify(allData)}
+        {allData.map((data) => (
+            <div>
+              
+            </div>
+        ))}
         </Layout>
     );
 }
+
+<h4><a href={"/"+data.id}>{data.name}</a></h4>
